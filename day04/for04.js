@@ -6,7 +6,7 @@
 // }
 
 // 2번 문제: 012340123401234 출력
-let result2 = "";
+// let result2 = "";
 // for(let i = 0; i < 3; i++){
 //     for(let j = 0; j < 5; j++){
 //         result2 += j
@@ -46,15 +46,41 @@ let result2 = "";
 
 // 6번 문제 1~5까지 반복후 아래 결과 만들기
 // "00001"
-let result6 = "";
-for(let i = 0; i < 5; i++){
-    let num = i + 1
-    result6 += num === 5 ? 1 : 0
-}
+// let result6 = "";
+// for(let i = 0; i < 5; i++){
+//     let num = i + 1
+//     result6 += num === 5 ? 1 : 0
+// }
 
-console.log(result6)
-
+// console.log(result6)
 
 // 7번 문제: 1~20중 10~15를 제외하고 출력하기
+// for(let i = 0; i < 20; i++){
+//     let num = i + 1
+//     if(num >= 10 && num <= 15){
+//         continue;
+//     }
+//     console.log(num);
+// }
+
 // 8번 문제: 1~100까지 홀수만 더한 값과, 짝수만 더한 값의 차를 구하여 출력하기
+
+// let even = 0;
+// let odd = 0;
+// for(let i = 0; i < 100; i++){
+//     let num = i + 1
+//     if(num % 2 === 0){
+//         even += num;
+//     } else {
+//         odd += num;
+//     }
+// }
+// console.log(even - odd);
+
 // 9번 문제: 1~10까지의 총합을 출력하시오
+let total = 0;
+for(let i = 0; i < 10; i++){
+    let num = i + 1
+    total += num;
+}
+console.log(total);
