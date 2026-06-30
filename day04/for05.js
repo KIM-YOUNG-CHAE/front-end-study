@@ -21,17 +21,19 @@
 // 1부터 9까지의 숫자 중 짝수는 제외되어야함
 // 1, 3, 5, 7, 9가 남는데 이를 문자열로 바꿔야함
 
-let star = "";
+let rows = 5; 
 
-for(let i=0; i<9; i++){
+for (let i = 0; i < rows; i++) {
+    let line = ""; 
 
-    let num = i + 1;
-    star += num
+    for (let j = 0; j < rows - i - 1; j++) {
+        line = line + " ";
+    }
 
-
-    // 1, 3, 5, 7, 9
-    if(num % 2 ===0){
-        continue;
-    }    
-    console.log(star)
+    for (let k = 0; k < (2 * i + 1); k++) {
+        line = line + "*";
+    }
+    
+    console.log(line);
 }
+
