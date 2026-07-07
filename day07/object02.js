@@ -15,7 +15,7 @@ const rabbit = {
 // 대괄호 접근법
 // 1. 변수를 사용할 수 있다.
 // 2. 규칙성이 있을 때 사용하는 문법
-// const name = "name"
+const name = "name"
 // console.log(rabbit[name])
 // console.log(rabbit["age"])
 // console.log(rabbit["species"])
@@ -29,6 +29,6 @@ for(let i in rabbit){
 
 // for of (값에 접근하는 반복문)
 // 객체에서는 사용할 수 없는 문법
-for(let i of rabbit){
-    console.log(i)
-}
+// for(let i of rabbit){
+//     console.log(i)
+// } 

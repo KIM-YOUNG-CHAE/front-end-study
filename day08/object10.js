@@ -21,4 +21,4 @@ student2.printScore()
 
 // 정수 메서드
 // .toFixed(자리수)
-console.log(10.3333333.toFixed(2))
+// console.log(10.3333333.toFixed(2))
