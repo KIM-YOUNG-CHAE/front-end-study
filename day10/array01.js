@@ -22,12 +22,12 @@ const array3 = new Array(10) // 칸 수를 알고 있을 때
 // console.log(array3.length)
 
 // split(): string메서드, 매개변수의 기준으로 문자열을 잘라서 배열로 반환해주는 메서드
-// const phone = "010-1234-1234".split("-")
+const phone = "010-1234-1234".split("-")
 // console.log(콜)
 
 // .join(): array 메서드, 전달된 매개변수의 기준으로 붙여서 새로운 문자열로 반환해주는 메서드
-// const str1 = phone.join("-")
-// console.log(str1)
+const str1 = phone.join("-")
+console.log(str1)
 
 // .replace(찾을 값, 바꿀 값): string 메서드, 찾은 값을 바꿀 값으로 변경하여 문자열로 반환하는 메서드
 // "김길동" -> "홍길동"
