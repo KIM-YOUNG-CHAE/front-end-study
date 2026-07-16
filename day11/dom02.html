@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 이름을 이용한 선택</title>
+</head>
+<body>
+    <ul>
+        <!-- 
+            홀수면 글자색을 핑크
+            짝수면 글자색을 그린
+        -->
+        <li class="item odd">첫 번째 아이템이에요!</li>
+        <li class="item even">두 번째 아이템이에요!</li>
+        <li class="item odd">세 번째 아이템이에요!</li>
+        <li class="item even">네 번째 아이템이에요!</li>
+        <li class="item odd">다섯 번째 아이템이에요!</li>
+    </ul>
+</body>
+<script>
+    HTMLCollection.prototype.forEach = Array.prototype.forEach
+
+    const items = document.getElementsByClassName("item")
+    const colors = {
+        "even": "green",
+        "odd": "pink"
+    }
+
+    // items.forEach((li) => {
+    //     console.log(li)
+    //     li.style.color = li.className.split(" ")[1] === "even" ? "pink" : "green"
+    // })
+
+    items.forEach((item) => {
+        item.style.color = colors[item.classList[1]]
+    })
+</script>
+</html>

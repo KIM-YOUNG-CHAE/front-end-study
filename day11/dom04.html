@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 선택자를 이용한 선택</title>
+</head>
+<body>
+    <div>
+        <h1 id="title">아이디를 이용한 선택</h1>
+        <p class="sub">설명 내용</p>
+    </div>
+</body>
+
+<script>
+    const title = document.querySelector("#title")
+    const title2 = document.querySelector("div > h1")
+    const title3 = document.querySelector("div #title")
+
+    console.log(title)
+    console.log(title2)
+    console.log(title3)
+
+    const sub = document.querySelectorAll(".sub")
+    console.log(sub)
+</script>
+</html>
