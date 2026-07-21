@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+</head>
+<body>
+    <form action="#">
+        <label>
+            <span>아이디</span>
+            <input type="text" name="id" placeholder="아이디를 입력하세요">
+            <p id="id-result"></p>
+        </label>
+        <label>
+            <span>비밀번호</span>
+            <input type="password" name="password" placeholder="비밀번호를 입력하세요.">
+            <p id="password-result"></p>
+        </label>
+        <button type="button">로그인</button>
+    </form>
+</body>
+<script>
+    const button = document.querySelector("button[type='button']")
+    const id = document.querySelector("input[name='id']")
+    const pw = document.querySelector("input[name='password']")
+    const idResult = document.querySelector("#id-result")
+    const pwResult = document.querySelector("#password-result")
+    const form = document.querySelector("form")
+
+    button.addEventListener("click", (e) => {
+
+        console.log(e.target)
+
+        // 1. id 값을 검증
+        // ealry return
+        if(!id.value){
+            // alert("아이디를 입력해주세요.")
+            idResult.innerText = "아이디를 입력해주세요."
+            idResult.style.color = "red"
+            return
+        }
+
+        idResult.innerText = "멋진 아이디네요."
+        idResult.style.color = "blue"
+        
+        if(!pw.value){
+            // alert("비밀번호를 입력해주세요.")
+            pwResult.innerText = "비밀번호를 입력해주세요."
+            pwResult.style.color = "red"
+            return
+        }
+
+        pwResult.innerText = "검증 완료!"
+        pwResult.style.color = "blue"
+        
+        // 데이터 전송 메서드
+        form.submit()
+    })
+
+</script>
+</html>

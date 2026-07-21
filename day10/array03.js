@@ -40,7 +40,8 @@ const arr7 = arr5.filter((data) => {
     return false
 })
 
-// console.log(arr7)
+console.log(arr6)
+console.log(arr7)
 
 // .indexOf(): string, array 메서드 문자열 또는 배열의 해당 값을 찾고, 값의 인덱스를 반환
 // console.log(new Array(5).fill(0).map((_, i) => i + 1).indexOf(4))
@@ -48,7 +49,7 @@ const arr7 = arr5.filter((data) => {
 
 // *) .find(): array 메서드 조건식을 만족하는 첫 번째 값을 리턴
 const str2 = ["기린", "기린", "기린"].find((data) => data === "기린")
-console.log(str2)
+// console.log(str2)
 
 // 나이가 30살인 유저를 찾는 방법 
 const arr8 = [
@@ -66,13 +67,13 @@ const arr8 = [
     },
 ]
 
-console.log(arr8.find((data) => data.age === 30))
-console.log(arr8.filter((data) => data.age === 30))
+// console.log(arr8.find((data) => data.age === 30))
+// console.log(arr8.filter((data) => data.age === 30))
 
 
 // *) .some(): array 메서드, 조건식에 만족하는 값이 하나라도 있으면 true, 없으면 false
-console.log(arr8.some((data) => data.age <= 19))
-console.log(arr8.some((data) => data.age >= 20))
+// console.log(arr8.some((data) => data.age <= 19))
+// console.log(arr8.some((data) => data.age >= 20))
 
 // .from(): array 메서드, 유사 배열 객체를 객체로 바꿔주는 메서드
 const obj = {

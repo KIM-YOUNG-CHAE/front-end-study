@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+</head>
+<body>
+    <form action="#">
+        <label>
+            <span>아이디</span>
+            <input type="text" name="id" placeholder="아이디를 입력하세요">
+            <p id="id-result"></p>
+        </label>
+        <label>
+            <span>비밀번호</span>
+            <input type="password" name="password" placeholder="비밀번호를 입력하세요.">
+            <p id="password-result"></p>
+        </label>
+        <button type="button">로그인</button>
+    </form>
+</body>
+<script>
+    const button = document.querySelector("button[type='button']")
+    const id = document.querySelector("input[name='id']")
+    const pw = document.querySelector("input[name='password']")
+    const idResult = document.querySelector("#id-result")
+    const pwResult = document.querySelector("#password-result")
+    const form = document.querySelector("form")
+
+    // 로그인 버튼을 누르기 전에r
+    // 아이디를 입력하거나 비밀번호를 입력할 때 유효성을 검사하세요.
+    globalThis.flag = new Array(false, false)
+
+
+    id.addEventListener("change", (e) => {
+        if(!e.target.value){
+            globalThis.flag[0] = false
+            idResult.innerText = "아이디를 입력하세요."
+            idResult.style.color = "red"
+            return 
+        }
+        globalThis.flag[0] = true
+        idResult.innerText = "멋진 아이디네요."
+        idResult.style.color = "blue"
+    })
+    
+    pw.addEventListener("change", (e) => {
+        if(!e.target.value){
+            globalThis.flag[1] = false
+            pwResult.innerText = "비밀번호를 입력하세요"
+            pwResult.style.color = "red"
+            return 
+        }
+
+        globalThis.flag[1] = true
+        pwResult.innerText = "검증 완료!"
+        pwResult.style.color = "blue"
+    })
+
+    button.addEventListener("click", () => {
+        if(globalThis.flag.filter((check => check)).length != 2){
+            alert("아이디 또는 비밀번호를 확인해주세요.")
+            return
+        }
+        form.submit()
+    })
+
+</script>
+</html>
