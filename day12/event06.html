@@ -35,6 +35,8 @@
 </body>
 <script>
     NodeList.prototype.map = Array.prototype.map
+    NodeList.prototype.filter = Array.prototype.filter
+    
     
     // 전체 동의 로직을 완료하세요!
     const all = document.querySelector("input.all")
@@ -51,6 +53,13 @@
             all.checked = terms.map((term) => term.checked).filter((checked) => checked).length === 3
         })
     })
+
+    // terms.forEach((term) => {
+    //     term.addEventListener("click", (e) => {
+    //       const trueChk = terms.filter((t) => t.checked)
+    //       all.checked = (trueChk.length === terms.length)
+    //     })
+    // })
 
 </script>
 </html>
